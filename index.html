@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSV Lead Uploader</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Include PapaParse library for CSV parsing -->
+    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.3.1/papaparse.min.js"></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <img src="https://raw.githubusercontent.com/brunomoraes97/create_offer_links/refs/heads/main/assets/icon.png" alt="Logo" class="logo">
+        <nav>
+            <a href="#" class="active">Home</a>
+            <!-- You can add more navigation links here -->
+        </nav>
+    </div>
+
+    <!-- Form Container -->
+    <div class="form-container">
+        <img src="https://raw.githubusercontent.com/brunomoraes97/create_offer_links/refs/heads/main/assets/icon.png" alt="Form Logo" class="form-logo">
+        <h1>Upload Leads CSV</h1>
+        <p>Please select an affiliate and upload a CSV file with the following columns:</p>
+        <ul>
+            <li>UserIp</li>
+            <li>Country</li>
+            <li>Password</li>
+            <li>Prefix</li>
+            <li>Phone</li>
+            <li>FirstName</li>
+            <li>LastName</li>
+            <li>Email</li>
+            <li>Language</li>
+            <li>Offer ID</li>
+        </ul>
+
+        <!-- Affiliate Selection Dropdown -->
+        <label for="affiliateSelect">Select Affiliate:</label>
+        <select id="affiliateSelect">
+            <option value="">Loading affiliates...</option>
+        </select>
+
+        <!-- CSV File Input -->
+        <label for="csvFileInput">Select CSV File:</label>
+        <input type="file" id="csvFileInput" accept=".csv">
+
+        <!-- Upload Button -->
+        <button id="uploadButton">Upload CSV</button>
+
+        <!-- Results Output -->
+        <div id="results" class="results"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
